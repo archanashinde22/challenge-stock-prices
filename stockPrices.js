@@ -1,8 +1,8 @@
 const best = (stockPrices) => {
-  let minPrice;
+  let minPrice =stockPrices[0];
   let maxProfit = 0;
   for (let i = 0; i < stockPrices.length; i++) {
-    if (minPrice === undefined || stockPrices[i] < minPrice) {
+    if (stockPrices[i] < minPrice) {
       minPrice = stockPrices[i];
     }
     if (maxProfit < stockPrices[i] - minPrice) {
